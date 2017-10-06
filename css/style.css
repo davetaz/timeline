@@ -50,7 +50,7 @@ section#timeline article div.inner span.date {
   border-radius: 100%;
   font-size: 12px;
   font-weight: 900;
-  text-transform: uppercase;
+  //text-transform: uppercase;
   background: #25303B;
   color: rgba(255,255,255,0.5);
   border: 2px solid rgba(255,255,255,0.2);
@@ -74,10 +74,14 @@ section#timeline article div.inner h2 {
   margin: 0;
   color: #fff;
   font-size: 20px;
-  text-transform: uppercase;
+  text-decoration: none;
+  //text-transform: uppercase;
   letter-spacing: -1px;
   border-radius: 6px 6px 0 0;
   position: relative;
+}
+a {
+  text-decoration: none;
 }
 section#timeline article div.inner h2:after {
   content: '';
@@ -134,4 +138,19 @@ section#timeline article:nth-child(5n+5) div.inner h2 {
 }
 section#timeline article:nth-child(5n+5) div.inner h2:after {
   background: #9b59b6;
+}
+@media only screen and (max-width: 760px) {
+   section#timeline article div.inner {
+      float: right;
+      width: 88%;
+   }
+   section#timeline article div.inner h2:after {
+    left: -5px;
+  }
+  section#timeline:before {
+    left: 0%;
+  }
+  section#timeline article div.inner span.date {
+    left: 0%;
+  }
 }

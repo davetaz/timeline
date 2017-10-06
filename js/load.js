@@ -37,11 +37,13 @@ function processData(filename) {
         $date.append($day);
         $date.append($month);
         $date.append($year);
+        $link = $("<a>", {"href":d.link,"target":"_blank"});
   			$title = $("<h2>");
   			$title.html(d.Title);
-  			$div.append($title);
+  			$div.append($link);
+        $link.append($title);
         $img = $("<img>", {"src":d.Picture});
-        $div.append($img);
+        $link.append($img);
         //$body = $("<p>");
         //$body.html(d["Short desc"]);
         //$div.append($body);
